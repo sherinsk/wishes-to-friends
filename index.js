@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Step 2: Define your email cron job with timezone set to India (Asia/Kolkata)
-cron.schedule('45 19 * * *', () => {
+cron.schedule('20 20 * * *', () => {
     console.log('Sending email at 7:25 PM IST daily.');
 
     let mailOptions = {
@@ -39,11 +39,11 @@ cron.schedule('45 19 * * *', () => {
 });
 
 // Step 3: Define a cron job to ping the server every 14 minutes
-cron.schedule('*/14 * * * *', () => {
+cron.schedule('*/15 * * * *', () => {
     console.log('Pinging the server every 14 minutes to keep it alive.');
 
     // Ping the server's /ping route
-    axios.get('http://localhost:3000/ping')
+    axios.get('https://wishes-to-friends.onrender.com/ping')
         .then(response => {
             console.log('Ping successful:', response.data);
         })
