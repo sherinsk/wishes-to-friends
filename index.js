@@ -39,7 +39,7 @@ cron.schedule('20 20 * * *', () => {
 });
 
 // Step 3: Define a cron job to ping the server every 14 minutes
-cron.schedule('*/15 * * * *', () => {
+cron.schedule('*/14 * * * *', () => {
     console.log('Pinging the server every 14 minutes to keep it alive.');
 
     // Ping the server's /ping route
