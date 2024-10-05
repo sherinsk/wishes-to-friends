@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
   });
 
 // Step 2: Define your cron job with timezone set to India (Asia/Kolkata)
-cron.schedule('17 19 * * *', () => {
+cron.schedule('22 19 * * *', () => {
     console.log('Sending email at 7:00 PM IST daily.');
 
     // Step 3: Define the email options
